@@ -1,0 +1,270 @@
+<mat-card class="example-card">
+    <mat-card-header style="border-bottom: 1px solid rgba(0, 0, 0, 0.16);">
+      <!-- <mat-icon>add</mat-icon> -->
+      <mat-card-title>Receiving</mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="padding-top: 10px;">
+      <mat-card>
+        <mat-card-header>
+          
+          <!-- <mat-card-title>Donor Details</mat-card-title> -->
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col">
+              <label>Financial Year</label>
+              <mat-form-field class="selectwrapper">
+              
+                <mat-select [(value)]="selectedFy">
+                  <mat-option *ngFor="let fy of fys" [value]="fy"> {{fy}}</mat-option>                
+                </mat-select>
+              </mat-form-field>
+      
+            </div>
+            <div class="col">
+              <label>Received Date</label>
+              <mat-form-field class="selectwrapper">
+                <input matInput [matDatepicker]="releasedAtPicker1">
+                <mat-datepicker-toggle matSuffix [for]="releasedAtPicker1">
+                </mat-datepicker-toggle>
+                <mat-datepicker #releasedAtPicker1>
+                </mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <label>Received By</label>
+              <mat-form-field class="selectwrapper">             
+                <mat-select>
+                  <mat-option value="html"> HTML </mat-option>
+                  <mat-option value="css" disabled>CSS (disabled)</mat-option>
+                  <mat-option value="js">JAVASCRIPT</mat-option>
+                </mat-select>
+              </mat-form-field>
+      
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-expansion-panel hideToggle [expanded]="true" style="margin-top: 4px;">
+        <mat-expansion-panel-header style="font-weight: 500;">
+          <mat-panel-title>
+            Donor Details
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="row">
+          <div class="col">
+            <label>Donor Name</label>
+            <input type="text" class="form-control" placeholder="Donor Name">
+          </div>
+          <div class="col">
+            <label>Behalf of Donor</label>
+            <input type="text" class="form-control" placeholder="Behalf of Donor">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Mobile</label>
+            <input type="text" class="form-control" placeholder="Mobile">
+          </div>
+          <div class="col">
+            <label>Address</label>
+            <input type="text" class="form-control" placeholder="Address">
+          </div>
+        </div>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel hideToggle [expanded]="true" style="margin-top: 4px;">
+        <mat-expansion-panel-header style="font-weight: 500;">
+          Payment Details
+        </mat-expansion-panel-header>
+        <div class="row">
+          <div class="col">
+            <label>Category</label>
+            <input type="text" class="form-control" placeholder="Category">
+          </div>
+          <div class="col">
+            <label>Income Received Mode</label>
+            <input type="text" class="form-control" placeholder="Income Received Mode">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>ChequeNo</label>
+            <input type="text" class="form-control" placeholder="Cheque Number">
+          </div>
+          <div class="col">
+            <label>Cash Amount</label>
+            <input type="text" class="form-control" placeholder="Cash Amount">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Bank Name</label>
+            <input type="text" class="form-control" placeholder="Bank Name">
+          </div>
+          <div class="col">
+            <label>Total Amount</label>
+            <input type="text" class="form-control" placeholder="Total Amount">
+          </div>
+        </div>
+      </mat-expansion-panel>
+  
+  
+      <!-- <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Financial Year</label>
+            <input type="text" class="form-control" 
+            placeholder="Financial Year">
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" 
+            class="form-control" placeholder="Last name">
+          </div>
+        </div> -->
+    </mat-card-content>
+    <!-- <div class="example-button-row">
+        <button mat-raised-button color="primary">Back</button>
+        <button mat-raised-button color="primary">Reset</button>
+        <button mat-raised-button color="primary">Save</button>
+      </div> -->
+    <!-- <mat-card-actions>
+        <button md-button>ACTION 1</button>
+        <div fxFlex></div>
+        <button md-button>ACTION 2</button>
+      </mat-card-actions> -->
+    <!-- <div> -->
+    <div style="text-align: left;float: left;">
+      <button mat-raised-button color="primary">Back</button>
+    </div>
+    <!-- <div style="text-align: right;"> -->
+    <!-- <button mat-raised-button color="primary">Reset</button>
+        <button mat-raised-button color="primary">Save</button> -->
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary">Reset</button>
+      <button mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+    <!-- </div>  -->
+    <!-- </div> -->
+  </mat-card>

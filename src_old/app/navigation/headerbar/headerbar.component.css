@@ -1,0 +1,30 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+.sidenav-wrapper {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+mat-sidenav {
+    width: 200px;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+}
+.newa {
+    text-align: right;
+}
+/* mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #002b5c;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  } */

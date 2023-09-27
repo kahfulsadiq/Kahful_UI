@@ -1,0 +1,116 @@
+<mat-toolbar color="primary">
+  <div>
+    <button mat-icon-button (click)="nav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+
+  <div class="logo" routerLink="/home">KAHF UL EEMAAN Educational,Charitable and Welfare Trust</div>
+  <span class="example-spacer"></span>
+  <!-- <button mat-button>Contact</button> -->
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>My Profile</button>
+    <button mat-menu-item>Change Password</button>
+    <button mat-menu-item>Log Out</button>
+  </mat-menu>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav opened #nav mode="side">
+    <mat-nav-list>
+      <mat-list-item routerLink="/home"> <mat-icon>home</mat-icon><span
+          style="margin-left: 5px;font-weight: 500;">Home</span>
+      </mat-list-item>
+
+      <mat-expansion-panel [expanded]="true" hideToggle (closed)="false">
+        <mat-expansion-panel-header>
+          <!-- <mat-icon style="font-size: 20px">account_balance</mat-icon> -->
+          <span style="padding-left: 5px;">Accounts</span>
+          <!-- <span class="material-icons" style="font-size: 30px;">account_balance</span> -->
+        </mat-expansion-panel-header>
+
+        <a mat-list-item routerLink="/receiving" class="newmapper">
+          <mat-icon style="font-size: 20px">call_received</mat-icon><span style="margin-left: 5px;">Receiving</span>
+        </a>
+        <a mat-list-item class="newmapper" routerLink="/expense">
+          <mat-icon style="font-size: 20px">payments</mat-icon><span style="margin-left: 5px;">Expenses</span>
+          <!-- <span class="material-icons" style="margin-left: 5px;font-size: 20px;">payments</span>Expense -->
+        </a>
+        <a mat-list-item class="newmapper" routerLink="/dailyexpense">
+          <!-- <mat-icon> list_alt</mat-icon>Daily Expenses -->
+          <mat-icon style="font-size: 20px">list_alt</mat-icon><span style="margin-left: 5px;">Daily Expenses</span>
+        </a>
+        <a mat-list-item class="newmapper" routerLink="/consolidate">
+          <!-- <span class="material-icons" style="font-size: 25px;">account_balance_wallet</span>Consolidation -->
+          <mat-icon style="font-size: 20px">account_balance_wallet</mat-icon><span
+            style="margin-left: 5px;">Consolidation</span>
+        </a>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="true" hideToggle>
+        <mat-expansion-panel-header>
+          <!-- <mat-icon style="font-size: 20px">account_balance</mat-icon> -->
+          <span style="padding-left: 5px;">Students</span>
+          <!-- <span class="material-icons" style="font-size: 30px;">account_balance</span> -->
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/Students" class="newmapper">
+            <mat-icon style="font-size: 20px">dashboard</mat-icon><span style="margin-left: 5px;">Dashboard</span>
+          </a>
+          <a mat-list-item routerLink="/Students" class="newmapper">
+            <mat-icon style="font-size: 20px">person</mat-icon><span style="margin-left: 5px;">Fee Details</span>
+          </a>
+          <a mat-list-item routerLink="/Students" class="newmapper">
+            <mat-icon style="font-size: 20px">insert_drive_file</mat-icon><span style="margin-left: 5px;">Report</span>
+          </a>
+
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="true" hideToggle>
+        <mat-expansion-panel-header>
+          <!-- <span style="margin-left: 10px;">Staff</span> -->
+          <span style="padding-left: 5px;">Staff</span>
+          <!-- <span class="material-icons" style="font-size: 30px;">account_balance</span> -->
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/Students" class="newmapper">
+            <mat-icon style="font-size: 20px">dashboard</mat-icon><span style="margin-left: 5px;">Dashboard</span>
+          </a>
+          <a mat-list-item routerLink="/Students" class="newmapper">
+            <mat-icon style="font-size: 20px">insert_drive_file</mat-icon><span style="margin-left: 5px;">Report</span>
+          </a>
+      
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="true" hideToggle>
+        <mat-expansion-panel-header>
+          <!-- <span style="margin-left: 10px;">Library</span> -->
+          <span style="padding-left: 5px;">Library</span>
+          <!-- <span class="material-icons" style="font-size: 30px;">account_balance</span> -->
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/Students" class="newmapper">
+            <mat-icon style="font-size: 20px">dashboard</mat-icon><span style="margin-left: 5px;">Dashboard</span>
+          </a>
+          <a mat-list-item routerLink="/Students" class="newmapper">
+            <mat-icon style="font-size: 20px">search</mat-icon><span style="margin-left: 5px;">Book Search</span>
+          </a>
+          <a mat-list-item routerLink="/Students" class="newmapper">
+            <mat-icon style="font-size: 20px">insert_drive_file</mat-icon><span style="margin-left: 5px;">Report</span>
+          </a>
+
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-nav-list>    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="background-color: white;">
+      <main class="mt-2">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

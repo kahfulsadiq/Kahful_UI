@@ -1,0 +1,96 @@
+<mat-toolbar color="primary">
+    <div>
+        <button mat-icon-button (click)="nav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+
+    <div class="logo">KAHF UL EEMAAN Educational,Charitable and Welfare Trust</div>
+    
+    <span class="example-spacer"></span>
+    <button mat-button>Contact</button>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>My Profile</button>
+        <button mat-menu-item>Change Password</button>
+        <button mat-menu-item>Log Out</button>
+    </mat-menu>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-wrapper" >
+    <mat-sidenav opened #nav mode="side">
+         <mat-nav-list>
+            <!-- <mat-list-item> <mat-icon>account_circle</mat-icon>Account</mat-list-item>
+
+            <a mat-list-item routerLink="/account" >
+                <mat-icon>account_circle</mat-icon>
+                <span>Account</span>
+              </a>  -->
+              <!-- <a mat-list-item routerLink="/home" >
+                <mat-icon>account_circle</mat-icon>
+                <span>Home</span>
+              </a>  -->
+              <!-- <mat-list-item routerLink="/home"> <mat-icon>account_circle</mat-icon>Home</mat-list-item> -->
+
+              <!-- <mat-list-item> <mat-icon>home</mat-icon>  Home
+                </mat-list-item> -->
+              <!-- <mat-list-item routerLink="/home"> <span class='material-icons'>home</span>Home</mat-list-item> -->
+              <!-- <a mat-list-item routerLink="/about" >
+                <mat-icon>account_circle</mat-icon>
+                <span>Aboutus</span>
+              </a>  -->
+              <!-- <mat-list-item routerLink="/about"> <mat-icon>account_circle</mat-icon>Aboutus</mat-list-item> -->
+              <mat-list-item> <mat-icon>account_balance</mat-icon>
+                <!-- <span class="material-icons">account_balance</span> -->
+              <button mat-menu-item [matMenuTriggerFor]="account">Accounts</button>
+
+              <mat-menu #account="matMenu">
+                <button mat-menu-item>Receiving</button>
+                <button mat-menu-item>Expense</button>
+                <button mat-menu-item>Report</button>
+              </mat-menu>
+            </mat-list-item>
+            <mat-list-item> <mat-icon>account_circle</mat-icon>
+            <button mat-button [matMenuTriggerFor]="admin">Adminstration</button>
+            <mat-menu #admin="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="student">Students</button>
+            <button mat-menu-item [matMenuTriggerFor]="staff">Staff</button>
+            </mat-menu>
+            <mat-menu #student="matMenu">
+                <button mat-menu-item>Dashboard</button>
+                <button mat-menu-item>Student Info</button>
+                <button mat-menu-item>Result</button>
+              </mat-menu>
+              <mat-menu #staff="matMenu">
+                <button mat-menu-item>Dashboard</button>
+                <button mat-menu-item>Staff Info</button>
+              </mat-menu>
+              
+
+            </mat-list-item>
+            
+            <mat-list-item> <span class='material-icons'>library_books</span>
+                <button mat-menu-item [matMenuTriggerFor]="library">Library</button>
+  
+                <mat-menu #library="matMenu">
+                  <button mat-menu-item>Dashboard</button>
+                  <button mat-menu-item>Book Info</button>
+                  <button mat-menu-item>Report</button>
+                </mat-menu>
+              </mat-list-item>
+              
+              <!-- <a mat-list-item routerLink="/contact" >
+                <mat-icon>account_circle</mat-icon>
+                <span>Contact</span>
+              </a> -->
+              <!-- <mat-list-item routerLink="/contact"> <mat-icon>account_circle</mat-icon>Contact</mat-list-item>  -->
+     </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content> 
+        <main class="mt-2">
+            <router-outlet></router-outlet>
+          </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

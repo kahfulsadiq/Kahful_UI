@@ -1,0 +1,32 @@
+.mat-card-actions{
+    padding:0 !important
+}
+.selectwrapper {
+    width:100%;
+}
+.selectwrapper1 {
+    padding: 0 !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding:1px 0 4px 0;
+ }
+ .mat-form-field-infix {
+    padding:0;
+    border-top: 0;
+}
+.mat-form-field-label-wrapper {
+    top: -0.84375em;
+    padding-top: 0.84375em;
+}
+/* .mat-select {
+    padding-top: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+.mat-select {
+    padding-top: 2px;
+} */
+
+/* ::ng-deep .mat-form-field-infix {
+    height: 30px;
+   
+} */
